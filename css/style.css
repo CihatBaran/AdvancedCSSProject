@@ -1,119 +1,106 @@
-/*
-COLORS:
+/* ---------------------Base Settings--------------------- */
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit; }
 
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
+html {
+  /* font-size: 10px; this is same as below*/
+  font-size: 62.5%; }
 
 body {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.7; 
-    color: #777;
-    padding:30px;
-}
+  box-sizing: border-box; }
 
-/* Header Section */
-.header {
-    height: 95vh;
-    background-image: 
-        linear-gradient(to right bottom,#7ed56fc3, #28b485c3),
-        url('./../img/hero.jpg');
-    background-size: cover;
-    background-position: top;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
-    
-    position: relative;
-}
+/* ---------------------Animations--------------------- */
+@keyframes moveInFromLeft {
+  0% {
+    transform: translateX(-10rem);
+    opacity: 0; }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    transform: translate(0);
+    opacity: 1; } }
 
-.logo-box {
-    position: absolute;
-    top:40px;
-    left:40px;
-}
+@keyframes moveInFromRight {
+  0% {
+    transform: translateX(10rem);
+    opacity: 0; }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    transform: translate(0);
+    opacity: 1; } }
 
-.logo {
-    height: 35px;
-}
-
-.text-box {
-    position: absolute;
-    top:40%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-}
+/* ---------------------Typography--------------------- */
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
 
 .heading-primary {
-    color: #fff;
-    text-transform: uppercase;
-    backface-visibility: hidden;
-    margin-bottom: 40px;
-}
-
-.heading-primary-main {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
-    
+    letter-spacing: 3.5rem;
     animation: moveInFromLeft 1s;
-    animation-timing-function: ease-out;
-}
-
-.heading-primary-sub {
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 17px;
-    
+    letter-spacing: 1.7rem;
     animation: moveInFromRight 1s;
-    animation-timing-function: ease-out;
-}
+    animation-timing-function: ease-out; }
 
-/* Buttons */
-.btn:link,
-.btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 15px 40px;
-    display: inline-block;
-    border-radius: 100px;
-    transition: transform .2s;
-}
+/* ---------------------Buttons--------------------- */
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: transform 0.2s;
+  font-size: 1.6rem; }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-}
+  transform: translateY(-0.3rem);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 48px 100px 0px; }
 
 .btn:active {
-    transform: translateY(-1px);
-}
+  transform: translateY(-0.1rem); }
 
-.btn-white {
-    background-color: #fff;
-    color: #777;
-}
+.btn--white {
+  background-color: #fff;
+  color: #777; }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ---------------------Header Section--------------------- */
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 226, 168, 0.8), rgba(30, 135, 75, 0.8)), url("./../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }

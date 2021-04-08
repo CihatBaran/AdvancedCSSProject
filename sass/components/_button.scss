@@ -8,7 +8,7 @@
     display: inline-block;
     border-radius: 10rem;
     transition: transform 0.2s;
-    font-size: 1.6rem;
+    font-size: $default-font-size;
   }
 
   &:hover {
@@ -23,5 +23,31 @@
   &--white {
     background-color: $color-white;
     color: $color-grey-dark;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary;
+    padding: 0.1rem;
+    font-size: $default-font-size;
+    transition: all 0.3s;
+    padding: 0 0.5rem;
+  }
+
+  &:hover {
+    background: $color-primary;
+    color: $color-white;
+    border: none;
+    box-shadow: rgba($color-primary-dark, 0.2) 0px 7px 29px 0px;
+    transform: translateY(-0.3rem);
+  }
+
+  &:active {
+    transform: translateY(-0.1rem);
   }
 }

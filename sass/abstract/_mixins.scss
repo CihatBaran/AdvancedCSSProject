@@ -12,3 +12,48 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/* ---------------------Media Queries--------------------- */
+/*
+0-600px -----> Mobile Phone
+600-900px -----> Tablet
+900-1200px -----> Tablet Landscape
+[1200px-1800px] ------> Current Styles
+1800+ -----> Big Desktop
+
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
+// refactoring of above,  below
+// em is inheriting from browser 16px
+@mixin respond($break-point) {
+  @if $break-point == phone {
+    @media (max-width: 37.5em) {
+      //600px
+      @content;
+    }
+  }
+
+  @if $break-point == tab-port {
+    @media (max-width: 56.25em) {
+      //900px
+      @content;
+    }
+  }
+
+  @if $break-point == tab-land {
+    @media (max-width: 75em) {
+      //1200px
+      @content;
+    }
+  }
+
+  @if $break-point == big-desktop {
+    @media (min-width: 112.5em) {
+      //1800px
+      @content;
+    }
+  }
+}

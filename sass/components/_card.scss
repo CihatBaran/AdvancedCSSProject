@@ -69,7 +69,7 @@
           $color-secondary-light,
           $color-secondary-dark
         ),
-        url('../img/nat-5.jpg');
+        url("../img/nat-5.jpg");
     }
 
     &--2 {
@@ -78,7 +78,7 @@
           $color-primary-light,
           $color-primary-dark
         ),
-        url('../img/nat-6.jpg');
+        url("../img/nat-6.jpg");
     }
 
     &--3 {
@@ -87,7 +87,7 @@
           $color-tertiary-light,
           $color-tertiary-dark
         ),
-        url('../img/nat-7.jpg');
+        url("../img/nat-7.jpg");
     }
   }
 
@@ -173,5 +173,54 @@
   &__price-value {
     font-size: 6rem;
     font-weight: 100;
+  }
+  //--------------Big Media Queries--------------------
+  @include respond(tab-port) {
+    height: auto;
+    box-shadow: rgba($color-black, 0.15) 0px 7px 29px 0px;
+    border-radius: 3px;
+    background-color: $color-white;
+
+    &__side {
+      height: auto;
+      position: relative;
+      box-shadow: none;
+
+      &--back {
+        transform: rotateY(0deg);
+        clip-path: polygon(0 9%, 100% 0%, 100% 100%, 0% 100%);
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0deg);
+    }
+
+    &__details {
+      ul {
+        padding: 2rem 2rem 1rem 2rem;
+      }
+    }
+
+    //Back styling
+    &__cta {
+      position: relative;
+      transform: translate(0);
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      padding-bottom: 3rem;
+    }
+
+    &__price-box {
+      margin-bottom: 1rem;
+      margin-top: 4rem;
+      color: $color-white;
+    }
+
+    &__price-value {
+      font-size: 6rem;
+    }
   }
 }

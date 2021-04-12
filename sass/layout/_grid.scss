@@ -3,16 +3,43 @@
   max-width: $grid-width; //this means if the screen size is bigger than 1140px than it will stay at 1140px, otherwise it will fill the 100% of the screen
   margin: 0px auto;
 
+  @include respond(tab-land) {
+    margin: 0px 1rem;
+  }
+
+  @include respond(tab-port) {
+    max-width: 80%;
+    padding: 0 3rem;
+    margin: 0px auto;
+  }
+
+  @include respond(phone) {
+    max-width: 90%;
+  }
+
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+    @include respond(tab-port) {
+      margin-bottom: $gutter-vertical-small;
+    }
   }
 
   @include clearfix;
 
-  [class^='col-'] {
+  [class^="col-"] {
     float: left;
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include respond(tab-port) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+
+    @include respond(tab-port) {
+      width: 100% !important;
     }
   }
   .col-1-of-2 {

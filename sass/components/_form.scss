@@ -16,6 +16,10 @@
     display: block;
     transition: all 0.3s;
 
+    @include respond(phone) {
+      width: 100%;
+    }
+
     &:focus {
       outline: none;
       box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
@@ -49,6 +53,11 @@
   &__radio-group {
     width: 45%;
     display: inline-block;
+
+    @include respond(phone) {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
   }
 
   &__radio-input {
@@ -73,12 +82,12 @@
     top: -5px;
 
     &::after {
-      content: '';
-      height: 1.2rem;
-      width: 1.2rem;
+      content: "";
+      height: 3rem;
+      width: 3rem;
       display: inline-block;
       border-radius: 50%;
-      border: 7.5px solid $color-primary;
+      border: 1.5rem solid $color-primary;
       display: inline-block;
       @include absoluteCenter;
       opacity: 0;

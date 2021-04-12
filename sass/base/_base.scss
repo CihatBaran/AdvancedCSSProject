@@ -9,25 +9,29 @@
 
 html {
   /* font-size: 10px; this is same as below*/
-  font-size: 62.5%;
+  font-size: 62.5%; // width > 1200, < 1800 ?
 
   @include respond(big-desktop) {
-    font-size: 75%;
+    //width > 1800 ?
+    font-size: 90%;
   }
 
   @include respond(tab-land) {
+    //width < 1200 ?
     font-size: 56.25%;
   }
 
   @include respond(tab-port) {
-    font-size: 50%;
+    //width < 900 ?
+    font-size: 55%;
   }
-
-  // @include respond(phone) {
-  //   font-size: 50%;
-  // }
 }
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }

@@ -1,6 +1,6 @@
 @mixin clearfix {
   &:after {
-    content: '';
+    content: "";
     display: table;
     clear: both;
   }
@@ -25,8 +25,12 @@
 - tab-port
 - tab-land
 - big-desktop
+
+Order of the querying 
+base, typography > general layout + grid page layout > components
+
 */
-// refactoring of above,  below
+
 // em is inheriting from browser 16px
 @mixin respond($break-point) {
   @if $break-point == phone {

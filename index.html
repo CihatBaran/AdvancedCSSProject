@@ -294,7 +294,7 @@
           </h2>
         </div>
 
-        <div class="row">
+        <div class="story__row">
           <div class="bg-video">
             <video class="bg-video__content" autoplay muted loop>
               <source src="../img/video.mp4" type="video/mp4" />
@@ -322,9 +322,7 @@
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Mollitia ipsa natus consequuntur quam reprehenderit minus
-                incidunt, rem recusandae cupiditate consectetur distinctio
-                delectus sed magni magnam ex totam rerum labore fga. Lorem ipsum
-                dolor sit amet consectetur adipisicing elit.
+                incidunt.
               </p>
             </div>
           </div>
@@ -349,8 +347,7 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Mollitia ipsa natus consequuntur quam reprehenderit minus
                 incidunt, rem recusandae cupiditate consectetur distinctio
-                delectus sed magni magnam ex totam rerum labore fga. Lorem ipsum
-                dolor sit amet consectetur adipisicing elit.
+                delectus.
               </p>
             </div>
           </div>
@@ -400,8 +397,8 @@
                       name="size"
                     />
                     <label for="small" class="form__radio-label"
-                      ><span class="form__radio-button"></span> Small Tour
-                      Group</label
+                      ><span class="form__radio-button"></span>Small
+                      group</label
                     >
                   </div>
 
@@ -413,7 +410,7 @@
                       name="size"
                     />
                     <label for="large" class="form__radio-label">
-                      <span class="form__radio-button"></span>Large Tour Group
+                      <span class="form__radio-button"></span>Large group
                     </label>
                   </div>
                 </div>
@@ -479,8 +476,16 @@
     <div class="popup" id="popup">
       <div class="popup__content">
         <div class="popup__left">
-          <img src="img/nat-9.jpg" alt="Tour Photo" class="popup__img" />
-          <img src="img/nat-8.jpg" alt="Tour Photo" class="popup__img" />
+          <img
+            src="img/nat-9.jpg"
+            alt="Tour Photo"
+            class="popup__img popup__img--1"
+          />
+          <img
+            src="img/nat-8.jpg"
+            alt="Tour Photo"
+            class="popup__img popup__img--2"
+          />
         </div>
         <div class="popup__right">
           <a href="#section-tours" class="popup__close">&times;</a>
@@ -500,7 +505,9 @@
             dolores molestiae quaerat nihil quam, fugit magnam cumque
             blanditiis!
           </p>
-          <a href="#" class="btn btn--green">Book now</a>
+          <div class="popup__button">
+            <a href="#" class="btn btn--green">Book now</a>
+          </div>
         </div>
       </div>
     </div>

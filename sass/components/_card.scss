@@ -11,6 +11,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     box-shadow: rgba($color-black, 0.15) 0px 7px 29px 0px;
     border-radius: 3px;
@@ -69,7 +70,7 @@
           $color-secondary-light,
           $color-secondary-dark
         ),
-        url("../img/nat-5.jpg");
+        url('../img/nat-5.jpg');
     }
 
     &--2 {
@@ -78,7 +79,7 @@
           $color-primary-light,
           $color-primary-dark
         ),
-        url("../img/nat-6.jpg");
+        url('../img/nat-6.jpg');
     }
 
     &--3 {
@@ -87,7 +88,7 @@
           $color-tertiary-light,
           $color-tertiary-dark
         ),
-        url("../img/nat-7.jpg");
+        url('../img/nat-7.jpg');
     }
   }
 
@@ -175,7 +176,8 @@
     font-weight: 100;
   }
   //--------------Big Media Queries--------------------
-  @include respond(tab-port) {
+  // @include respond(tab-port) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     height: auto;
     box-shadow: rgba($color-black, 0.15) 0px 7px 29px 0px;
     border-radius: 3px;
